@@ -1,27 +1,175 @@
+/* ================================================= */
+/* CORE DARK MODE SETUP: TARGETING HACKMD UI & BODY  */
+/* ================================================= */
+
+/* Above and Below Page background */
+body, html, .ui-header, .navbar, .ui-toolbar, .ui-navbar, .ui-app-view {
+  background-color: #1e1e1e !important;
+  color: #e8e8e8 !important;           /* Light brown */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======= Page background & text ======= */
+.markdown-body, .ui-infobar {
+  background-color: #1e1e1e !important;
+  color: #e8e8e8 !important; /* Light brown */
+  max-width: unset !important;
+}
+
+/* 🚀 ULTIMATE COLOR FIX: Targets all text elements in the infobar and document footer areas. */
+.ui-infobar *,
+.document-footer .text-text-subtle,
+.document-footer span,
+.document-footer p,
+.document-footer a,
+.footer span,
+.footer p,
+.footer a,
+.document-footer > div:first-child span {
+    color: #e8e8e8 !important;
+}
+
+/* 🎨 NEW RULE: STYLING DEFAULT UI BUTTONS AND MENUS (Edit, TOC, Read More) */
+/* ============================================= */
+.ui-edit, 
+.ui-toc-dropdown, 
+.ui-recommendation-read-more,
+/* Target hackmd's general background classes being used by these elements */
+.bg-background-default, 
+.dropdown-menu {
+    background-color: #1e1e1e !important;
+    color: #e8e8e8 !important;
+    border-color: #e8e8e8 !important;
+}
+
+/* Ensure text inside these buttons/menus is correct */
+.ui-edit *,
+.ui-toc-dropdown *,
+.ui-recommendation-read-more *,
+.dropdown-menu a,
+.text-text-default {
+    color: #e8e8e8 !important;
+}
+
+/* Hover effects for the default HackMD buttons */
+.ui-edit:hover, 
+.ui-recommendation-read-more:hover {
+    background-color: #1e1e1e !important; /* Darker brown on hover */
+    color: #4da3ff !important; /* Blue text on hover (Optional: keeps link color) */
+}
+
+/* TOC button icon (fa fa-bars) color fix */
+.ui-toc-label i.fa {
+    color: #e8e8e8 !important;
+}
+
+/* ============================================= */
+/* Ensure links in the top bar are visible */
+.navbar a, .ui-toolbar a, .ui-navbar a, .ui-breadcrumb a {
+  color: #e8e8e8 !important; /* Light gray text for links */
+}
+.navbar a:hover, .ui-toolbar a:hover, .ui-navbar a:hover, .ui-breadcrumb a:hover {
+  color: #4da3ff !important;
+}
+
+/* Ensure text elements (headings, strong) are white */
+h1, h2, h3, h4, h5, h6, strong {
+    color: #e8e8e8 !important; /* Light brown*/
+}
+
+/* Remove separating lines under h1 h2 titles */
+h1, h2 {
+    border-bottom: none !important; /* Removes the line below H1 and H2 */
+    padding-bottom: 0 !important;   /* Reduces potential space from the removed line */
+    margin-bottom: 0.5em !important; /* Adjust margin to ensure proper spacing */
+}
+
 a {
-    color: #ff7fae !important;
+    color: #90c0ff !important; /* Light blue links */
     text-decoration: none;
-    font-weight: bold;
+}
+a:visited {
+    color: #c090ff; /* Purple for visited links */
 }
 
+/* Ensure page content isn't hidden under the custom bar */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #252525 !important;
+  padding-top: 0px !important;
 }
 
+/* ================================================= */
+/* CUSTOM STYLES (Adjusted for dark mode) */
+/* ================================================= */
+/* ====== Section Container Styling (Adjusted for dark mode) ====== */
+.section-box {
+  /* CHANGED: Set box background to a slightly lighter dark color and border/shadows */
+  background: #1e1e1e;               /* Slightly lighter dark background for contrast */
+  border-radius: 12px;               /* rounded corners */
+  padding: 16px 24px;                /* inner spacing */
+  margin: 16px 0;                    /* vertical spacing */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);  /* darker shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #333333;         /* darker outline */
+/*   color: #ffffff; */
+}
+
+/* Hover floating effect (Adjusted for dark mode) */
+.section-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  background: #000000; /* light up a bit on hover */
+}
+
+/* Column Layouts */
+.three-column-layout {
+  column-count: 3; /* Set column number */
+  column-gap: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .three-column-layout {
+    column-count: 1; /* Switch to single column on small screens */
+    column-gap: 0;   /* Optional: Set gap to 0 for single column */
+  }
+}
+
+.two-column-layout {
+  column-count: 2; /* Set column number */
+  column-gap: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .two-column-layout {
+    column-count: 1; /* Switch to single column on small screens */
+    column-gap: 0;   /* Optional: Set gap to 0 for single column */
+  }
+}
+
+svg path, svg {
+    fill: #ffffff !important;
+    vertical-align: middle !important; /* Re-introduce this as the base */
+}
+
+/* ================================================= */
+/* PRESERVED STYLES FROM ORIGINAL (GitHub specific) */
+/* ================================================= */
 .container_jedd {
     max-width: 1600px;
     margin: 20px auto;
     padding: 20px;
-    background: #252525;
+    background: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.other {
+/* .other {
     border: 1px solid #535353;
     border-radius: 10px;
     padding: 20px;
@@ -43,9 +191,9 @@ body {
 }
 .other ul, .other ol {
     padding-inline-start: 20px;
-}
+} */
 
-.contact-info {
+/* .contact-info {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -53,14 +201,10 @@ body {
     justify-content: center;
 }
 
-/* .social-links {
-    justify-content: center;
-} */
-
 .icon-link {
     position: relative;
     display: inline-block;
-    width: 30px; /* Match image size for consistency */
+    width: 30px;
     height: 30px;
     cursor: pointer;
 }
@@ -74,7 +218,7 @@ body {
 }
 
 .certificate-content {
-    margin-left: 40px; /* Space for the line and branch */
+    margin-left: 40px;
     position: relative;
 }
 
@@ -93,6 +237,5 @@ figcaption {
 .navbar-brand, .nav-link {color: #ffffff !important;}
 .nav-link.active {color: #ffffff !important;}
 .nav-link:hover {color: #ffffff !important;}
-/* Optional: Navbar brand hover effect */
 .navbar-brand:hover {color: #ffffff !important;}
-.text-white {color: #ffffff !important;}
+.text-white {color: #ffffff !important;} */
