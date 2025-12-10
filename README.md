@@ -1,21 +1,45 @@
-# Resume Page
+# Jedd's Personal Website
 
-This is a static website showcasing Jedd's frontend design ability using **Bootstrap** <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap Logo" style="width: 30px; height: auto;"> UI library.
+A modern, responsive personal website built with Jekyll and Bootstrap, featuring a dark mode theme inspired by HackMD.
 
----
+## Live Site
+
+**[jeddiot.github.io](https://jeddiot.github.io/)**
 
 ## Features
-- **Responsive Design:** Automatically adjusts to different screen sizes for optimal viewing.
-- **Clean Layout:** Simple and professional design for easy readability.
 
----
-
-## Access the Website
-Click the link below to visit the CV page:
-
-[Visit the Website](https://jeddiot.github.io/personal-website/)
-
----
+- Dark mode theme with HackMD-inspired design
+- Responsive layout for all screen sizes
+- Social media integration bar
+- Dynamic navigation with active page highlighting
 
 ## Built With
-- [Bootstrap](https://getbootstrap.com/) - Frontend component library.
+
+- [Jekyll](https://jekyllrb.com/) - Static site generator
+- [Bootstrap 5.3](https://getbootstrap.com/) - Frontend framework
+- Custom CSS for dark mode styling
+
+## Local Development
+
+```bash
+# Install Jekyll
+gem install jekyll bundler
+
+# Clone and serve
+git clone https://github.com/jeddiot/jeddiot.github.io.git
+cd jeddiot.github.io
+jekyll serve --host 0.0.0.0 --port 4000
+```
+
+Visit `http://localhost:4000` to preview locally.
+
+## Project Structure
+
+```
+├── _layouts/          Layout templates
+├── _config.yml        Jekyll configuration
+├── index.html         Home page
+├── skillandworks.html Skills & Projects
+├── style.css          Custom styles
+└── pic/               Images
+```
